@@ -10,21 +10,6 @@ export const CardGrid = styled.div`
   /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 20px;
-  @media (max-width: 1000px) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @media (max-width: 600px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 400px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
 `;
 
 export const Card = styled.div`

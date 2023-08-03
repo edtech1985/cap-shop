@@ -7,7 +7,7 @@ export const StyledFooter = styled.footer`
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  width: 100%;
+  width: 100vw;
   max-width: 100vw;
   box-sizing: border-box;
 `;

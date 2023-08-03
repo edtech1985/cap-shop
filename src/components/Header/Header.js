@@ -9,16 +9,16 @@ export const StyledHeader = styled.header`
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   width: 100vw;
   max-height: 100px;
-  padding-left: 20px;
-  padding-right: 20px;
+  /* padding-left: 20px;
+  padding-right: 20px; */
   box-sizing: border-box;
   font-size: 900;
   color: black;
 `;
 
 export const StyledLogo = styled.img`
-  width: 100px;
-  height: 100px;
+  width: 4rem;
+  max-height: 4rem;
 `;
 
 export const StyledNavbar = styled.nav`
@@ -29,10 +29,10 @@ export const StyledNavbar = styled.nav`
 
 export const StyledNavItem = styled.a`
   display: block;
-  padding: 1rem;
+  padding: 0.75rem;
   color: #fff;
   text-decoration: none;
-  font-size: large;
+  font-size: 14px;
 
   &:hover {
     background-color: #555;
@@ -76,11 +76,15 @@ export const StyledAvatar = styled.div`
   display: grid;
   align-items: center;
   justify-items: center;
+
+  @media only screen and (max-width: 400px) {
+    display: none;
+  }
 `;
 
 export const StyledAvatarImage = styled.img`
-  width: 50px;
-  height: 50px;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
 `;
 
@@ -91,21 +95,33 @@ export const StyledCart = styled.div`
 `;
 
 export const StyledCartIcon = styled.div`
-  width: 50px;
-  height: 50px;
+  width: 3rem;
+  height: 3rem;
   background-color: #fff;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+
+  @media only screen and (max-width: 400px) {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+  }
 `;
 
 export const StyledCartCount = styled.div`
   margin-left: 0.25rem;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: bold;
   color: black;
-  font-size: medium;
+  font-size: 1.25rem;
+
+  @media only screen and (max-width: 400px) {
+    margin-left: 0.25rem;
+  font-size: 0.5rem;
+  font-size: 1rem;
 `;

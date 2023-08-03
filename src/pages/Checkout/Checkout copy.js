@@ -37,31 +37,16 @@ export const CheckoutTableDataQt = styled.td`
 
 export const CheckoutTableDataName = styled(CheckoutTableData)`
   width: 20vw;
-
-  @media (max-width: 768px) {
-    width: auto;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
 `;
 
 export const CheckoutTableDataPrice = styled(CheckoutTableData)`
   width: 10vw;
   text-align: right;
-
-  @media (max-width: 768px) {
-    width: auto;
-  }
 `;
 
 export const CheckoutTableDataQuantity = styled(CheckoutTableData)`
   width: 10vw;
   text-align: center;
-
-  @media (max-width: 768px) {
-    width: auto;
-  }
 `;
 
 export const CheckoutSummary = styled.div`
@@ -109,10 +94,6 @@ export const QuantityButtons = styled.div`
   align-items: center;
   justify-content: flex-end;
   width: 10vw;
-
-  @media (max-width: 768px) {
-    width: auto;
-  }
 `;
 
 export const MinusButton = styled.button`

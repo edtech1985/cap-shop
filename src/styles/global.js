@@ -15,6 +15,7 @@ body {
     display: flex;
     justify-content: center;
     background-color: #f2f2f2;
+
 }
 
 :root {

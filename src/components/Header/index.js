@@ -16,7 +16,6 @@ import {
   StyledCartCount,
 } from "./Header";
 import logo from "../../img/logo1.jpeg";
-import avatar from "../../img/logo2.jpg";
 
 function Header() {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -58,7 +57,11 @@ function Header() {
           </StyledCartIcon>
         </Link>
         <StyledAvatar>
-          <StyledAvatarImage src={avatar} alt="Avatar" />
+          <StyledAvatarImage
+            src="https://avatars.githubusercontent.com/u/98822745?v=4"
+            alt="Avatar"
+          />
+          {/* <StyledAvatarImage src={avatar} alt="Avatar" /> */}
         </StyledAvatar>
       </StyledCartDiv>
     </StyledHeader>
