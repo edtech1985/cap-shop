@@ -122,6 +122,7 @@ export const StyledCartCount = styled.div`
 
   @media only screen and (max-width: 400px) {
     margin-left: 0.25rem;
-  font-size: 0.5rem;
-  font-size: 1rem;
+    font-size: 0.5rem;
+    font-size: 1rem;
+  }
 `;
