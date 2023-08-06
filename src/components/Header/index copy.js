@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { FaShoppingCart } from "react-icons/fa";
@@ -17,10 +17,7 @@ import {
 } from "./Header";
 import logo from "../../img/logo1.jpeg";
 
-import { CartContext } from "../CartContext/index";
-
 function Header() {
-  const { cartCount } = useContext(CartContext);
   const [showDropdown, setShowDropdown] = useState(false);
   const [checkoutItems, setCheckoutItems] = useState([]);
 
@@ -56,7 +53,7 @@ function Header() {
         <Link to="/checkout">
           <StyledCartIcon>
             <FaShoppingCart />
-            <StyledCartCount>{cartCount}</StyledCartCount>
+            <StyledCartCount>{checkoutItems.length}</StyledCartCount>
           </StyledCartIcon>
         </Link>
         <StyledAvatar>

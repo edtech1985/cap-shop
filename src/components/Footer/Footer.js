@@ -40,4 +40,9 @@ export const StyledRightsReserved = styled.p`
 export const StyledDevelopedBy = styled.p`
   margin: 0;
   font-size: 0.9rem;
+
+  a {
+    text-decoration: none;
+    color: gold;
+  }
 `;

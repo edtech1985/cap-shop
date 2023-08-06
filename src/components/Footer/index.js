@@ -1,4 +1,11 @@
-import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import {
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaWhatsapp,
+  FaReact,
+} from "react-icons/fa";
+
 import {
   StyledDevelopedBy,
   StyledFooter,
@@ -11,6 +18,11 @@ function Footer() {
   return (
     <StyledFooter>
       <StyledIconList>
+        <StyledIconItem>
+          <a href="https://edtech1985.com.br" target="_blank" rel="noreferrer">
+            <FaReact />
+          </a>
+        </StyledIconItem>
         <StyledIconItem>
           <a
             href="https://github.com/edtech1985"
@@ -49,7 +61,17 @@ function Footer() {
         </StyledIconItem>
       </StyledIconList>
       <StyledRightsReserved>© 2023 Direitos Reservados</StyledRightsReserved>
-      <StyledDevelopedBy>Developed by edtech1985</StyledDevelopedBy>
+      <StyledDevelopedBy>
+        Desenvolvido por{" "}
+        <a
+          href="http://edtech1985.com.br"
+          alt="edtech1985 Portfolio"
+          target="_blank"
+          rel="noreferrer"
+        >
+          edtech1985
+        </a>
+      </StyledDevelopedBy>
     </StyledFooter>
   );
 }

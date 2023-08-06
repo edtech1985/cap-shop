@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import {
   BodyContainer,
@@ -13,27 +13,13 @@ import {
 } from "./CapsMale.js";
 import caps from "../../../db/maledb.json";
 
-function CapsMale() {
-  const [cartItems, setCartItems] = useState([]);
+import { CartContext } from "../../../components/CartContext";
 
-  const handleAddToCart = (item) => {
-    const existingItem = cartItems.find((i) => i.id === item.id);
-    if (existingItem) {
-      // atualizar quantidade
-      const updatedCartItems = cartItems.map((i) =>
-        i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i
-      );
-      setCartItems(updatedCartItems);
-      localStorage.setItem("MaleCartItems", JSON.stringify(updatedCartItems));
-    } else {
-      // adicionar novo item com quantidade igual a 1
-      const newItem = { ...item, quantity: 1 };
-      setCartItems([...cartItems, newItem]);
-      localStorage.setItem(
-        "MaleCartItems",
-        JSON.stringify([...cartItems, newItem])
-      );
-    }
+function CapsMale() {
+  const { handleAddToCart } = useContext(CartContext);
+
+  const handleAddToCartClick = (item) => {
+    handleAddToCart(item);
   };
 
   return (
@@ -47,7 +33,7 @@ function CapsMale() {
               <CardPrice>{`R$ ${cap.price.toFixed(2)}`}</CardPrice>
               <CardRef>{`Ref: ${cap.reference}`}</CardRef>
             </CardInfo>
-            <CardCartButton onClick={() => handleAddToCart(cap)}>
+            <CardCartButton onClick={() => handleAddToCartClick(cap)}>
               <FaShoppingCart />
             </CardCartButton>
           </Card>
